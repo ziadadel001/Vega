@@ -1,0 +1,90 @@
+/*  */
+@media (max-width: 2560px) and (min-width: 1441px) {
+  .sessions {
+    transform: translateY(-200px);
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .sessions {
+    transform: translateY(-150px);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+  .sessions {
+    transform: translateY(-80px);
+  }
+}
+@media (max-width: 1200px) {
+  .booking {
+    width: 90%;
+  }
+}
+@media (min-width: 993px) {
+  .bio {
+    width: 50%;
+  }
+  .background {
+    width: 50%;
+  }
+  .experience {
+    width: 50%;
+  }
+  .achievment {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .booking {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+}
+@media (max-width: 768px) {
+  .profile .breadcrumb {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__header .mentor__header--info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem !important;
+    margin-bottom: 10px;
+  }
+  .profile__header .mentor__header--info .mentor__data--head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .profile__header .mentor__header--info p {
+    text-align: center;
+  }
+  .profile__header .mentor__header--info .mentor__data--media {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) and (min-width: 426px) {
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+}
+
+@media (max-width: 375px) and (min-width: 321px) {
+}
+
+@media (max-width: 320px) {
+}
+
+/*//////////////////// */
+/* height */
+
+@media (max-height: 678px) {
+  .booking {
+    overflow-y: scroll;
+  }
+}

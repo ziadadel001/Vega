@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #e98016;
+  --backGround-color: #fff2e5;
+  --textMuted: #6f6c8f;
+}
+.time-schedule .wrapper .current-date {
+  font-size: 24px;
+}
+.time-schedule .wrapper header {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  /* gap: 25px; */
+  justify-content: space-between;
+}
+.icons {
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+}
+.icons span {
+  font-size: 30px;
+}
+.time-schedule .wrapper .calendar .days {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+.time-schedule .wrapper .calendar .days::-webkit-scrollbar {
+  opacity: 0;
+}
+.time-schedule .wrapper .calendar .days .day {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 77px;
+  height: 110px;
+  border-radius: 16px;
+  background-color: var(--backGround-color);
+  cursor: pointer;
+  user-select: none;
+}
+.time-schedule .wrapper .calendar .days .active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.time-schedule .wrapper .calendar .days p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.time-schedule .wrapper .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+}
+.time-schedule .wrapper .slider-scrollbar .scrollbar-track {
+  height: 4px;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+.time-schedule .wrapper .slider-scrollbar:hover .scrollbar-thumb {
+  height: 5px;
+  top: -0.5px;
+}
+
+.time-schedule .wrapper .slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  border-radius: inherit;
+  width: 40%;
+  background: var(--primary-color);
+  cursor: grab;
+}
+.time-schedule .wrapper .slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 7px;
+  top: -1.5px;
+}
+.time-schedule .wrapper .slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+/* Tasks section */
+
+.tasks-container .task .task-block .task-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--backGround-color);
+}
+.tasks-container .task .task-block p {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(14px, 1vw, 16px);
+}
+.tasks-container .task .task-block span {
+  font-weight: 400;
+  color: var(--textMuted);
+}
+.tasks-container .task .task-block .task-div .pts {
+  font-weight: 500;
+}
+.tasks-container .task .task-block .task-div .pts-progress {
+  color: var(--textMuted);
+}
+.tasks-container .task .task-block .task-div .pts-complete {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(
+      closest-side,
+      var(--backGround-color) 78%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--primary-color) 50%, #ccc 0);
+}
+
+.progress-bar::before {
+  content: "50%";
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.lessons {
+  flex: 0.9;
+}
+.sessions {
+  flex: 0.9;
+}
+.interviews {
+  flex: 0.9;
+}
+.mentor-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.mentor-details img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.text-muted {
+  color: var(--textMuted) !important;
+}
+.btn {
+  background-color: #e98016;
+  color: white;
+  width: 100%;
+  &:hover {
+    background-color: rgba(255, 128, 0, 0.9);
+    color: white;
+  }
+}

@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--semiDark-color);
+  font-family: "poppins";
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-SemiBold.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-ExtraBold.ttf);
+  font-weight: 900;
+}
+
+:root {
+  --primary-color: #e98016;
+  --secondary-color: #5634ae;
+  --third-color: #ece7fe;
+  --secondaryText-color: #6f6c8f;
+  --dark-color: #000;
+  --semiDark-color: #002333;
+  --light-color: white;
+  --lightGray-color: #fafafa;
+  --gray-color: #808080;
+}
+body {
+  background-color: var(--lightGray-color);
+}
+.text-muted {
+  color: var(--secondaryText-color);
+}
+.btn-prim {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-color);
+  /* min-width: 190px; */
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 200ms;
+  &:hover {
+    background-color: #e97f16e7;
+  }
+}
+
+.job_hours-badge {
+  background-color: #efebf9;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.job_data {
+  flex: 6;
+}
+.cta {
+  flex: 1;
+}
+.job_details {
+  /* flex: 0.7; */
+}
+.job_overview {
+  background-color: white;
+  padding: 20px;
+  min-width: 400px;
+  border-radius: 16px;
+  position: sticky;
+  top: 10px;
+  @media (max-width: 425px) {
+    min-width: 300px;
+  }
+}
+.skill {
+  background-color: #f5f5fa;
+  padding: 10px 20px;
+  border-radius: 32px;
+}
+.related_job {
+  background-color: white;
+  border: #d1d3d4 1px solid;
+  border-radius: 8px;
+}
+.cta_related-job {
+  flex: 1;
+}

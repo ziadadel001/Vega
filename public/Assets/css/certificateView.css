@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--semiDark-color);
+  font-family: "poppins";
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-SemiBold.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-ExtraBold.ttf);
+  font-weight: 900;
+}
+
+:root {
+  --primary-color: #e98016;
+  --secondary-color: #5634ae;
+  --third-color: #ece7fe;
+  --secondaryText-color: #6f6c8f;
+  --dark-color: #000;
+  --semiDark-color: #002333;
+  --light-color: white;
+  --lightGray-color: #fafafa;
+  --gray-color: #808080;
+}
+.text-muted {
+  color: var(--secondaryText-color);
+}
+
+header {
+  background-color: var(--third-color);
+  padding: 100px 0;
+}
+.certificates .card .btn {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-color);
+  transition: 200ms;
+  &:hover {
+    background-color: #e97f16e7;
+  }
+}
+.breadcrumb li {
+  font-size: clamp(12px, 2vw, 18px);
+}
+
+.certificate_info {
+  flex: 1;
+}
+.certificate_view {
+  flex: 1;
+}
+.user_info {
+  background-color: #f4f4f4;
+}
+.user_info img {
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  border-radius: 50%;
+}
+.course_objective {
+  background-color: #f4f4f4;
+}
+.show_more {
+  text-decoration: underline;
+  color: #5634ae;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.cert_btns .btn_prim {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+.cert_btns .btn_sec {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  color: var(--primary-color);
+  width: 100%;
+}

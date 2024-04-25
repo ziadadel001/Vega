@@ -1,0 +1,45 @@
+// last update 13/4  --> ziad adel //
+
+
+
+
+1- Authentication
+	-> Sign up  		->InComplete +(name&password&email) check  
+	-> login    		->Complete 
+	-> Logout	        ->Complete
+	-> Reset password	->Missing frontend pages
+     
+2- landing page 
+	-> Hero section 	->Complete
+	-> courses section 	->Complete
+	-> mentors section 	->Complete
+	-> blog section		->Complete
+
+
+3- Corses Feature
+	-> Courses 		->Complete 
+	-> Course info 		->InComplete (discount + Resourses)
+	-> buying process 	->InComplete (discount )
+	-> confirmation		->Missing frontend pages
+
+4- Mentors Feature
+	-> Mentors		->Missing frontend pages
+	-> Mentor info 		->InComplete (need Mentors page)
+	-> buying process 	->InComplete (need Mentors page)
+	-> confirmation		->Missing frontend pages
+
+5-Roadmaps Feature
+	-> Roadmaps 		->InComplete (custom roadmap)
+	->Roadmap details	->InComplete (courses)
+
+6-job Feature
+	-> jobs 			->InComplete (Searchbar is notworking)	
+	-> job info 		->Missing frontend pages
+	-> confirmation		->Missing frontend pages
+
+* DataBase
+	-> Mentor table   			->InComplete 
+	-> blog table				->InComplete
+	-> courses table 			->InComplete  + Relation with Mentor id 
+	-> users table				->InComplete  + (name$password&email)
+	-> opportunities table		->InComplete

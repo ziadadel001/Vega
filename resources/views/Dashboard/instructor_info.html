@@ -1,0 +1,653 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/lib/fontawesome-free-6.4.2-web/css/all.min.css" />
+  <link rel="stylesheet" href="css/info.css" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body onload="myFunction(x)">
+  <div id="mySidenav" class="sidenav nav-open">
+    <img src="images/Logo.png" alt="vegaLogo" />
+    <ul class="nav-list">
+      <li>
+        <div class="nav-list-btn active">
+          <img src="images/DashboardNavLogo.png" alt="" style="width: 40px" />
+          <a href="index.php" class="active">Dashboard</a>
+        </div>
+      </li>
+      <li>
+        <div class="nav-list-btn">
+          <img src="images/UsersNavLogo.png" alt="" style="width: 40px" />
+          <a href="users.php">Users</a>
+        </div>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <div class="nav-list-title">
+            <img src="images/MentorsNavLogo..png" style="width: 40px" alt="" />
+            <a href="#">Mentors</a>
+          </div>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="Mentor_info.php">Mentors Overview</a></li>
+          <li><a href="Mentor-list.php">Mentors List</a></li>
+          <li><a href="Mentor_payment.html">Mentors Payment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <img src="images/InstructorsNavLogo.png" style="width: 40px" alt="" />
+          <a href="#">Instructors</a>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="instructor_info.php">Instructors Overview</a></li>
+          <li><a href="instructor-list.php">Instructors List</a></li>
+          <li><a href="instructor_payment.html">Instructors Payment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <img src="images/CoursesNavLogo.png" style="width: 40px" alt="" />
+          <a href="#">Courses</a>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="course-category.php">Category</a></li>
+          <li><a href="Courses_List.php">Course List</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="main" class="main-shrink">
+    <nav>
+      <div class="nav-search">
+        <div class="nav-btn" onclick="toggleNav()">
+          <i class="fa-solid fa-bars fa-2x" style="color: #0500fe;"></i>
+        </div>
+        <div class="search-bar">
+          <input type="search" name="search" id="search" />
+          <img src="images/searchIcon.png" alt="" />
+        </div>
+      </div>
+      <div class="nav-profile">
+        <i class="fa-regular fa-bell fa-2x" style="color: #0500fe;"></i>
+        <i class="fa-regular fa-envelope fa-2x" style="color: #0500fe;"></i>
+        <div class="nav-profile-info">
+          <div class="profile-data">
+            <h4>Ahmed Samy</h4>
+            <p>Admin</p>
+          </div>
+          <img src="images/man.png" alt="" />
+        </div>
+        <i class="fa-solid fa-gear fa-2x" style="color: #0500fe;"></i>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="bread-crumb">
+        <a href="#">Instructor/ </a>
+        <p> 
+            personal_detals['NAME']</p>
+      </div>
+      <div class="info-all">
+        <div class="toogle" style="cursor: pointer;">
+          <a class="tab" id="showDiv1">
+            <i class="fa-solid fa-user"></i>
+            Personal information
+          </a>
+          <a class="tab" id="showDiv2">
+            <i class="fa-solid fa-eye"></i>
+            Overview
+          </a>
+          <a class="tab" id="showDiv3">
+            <i class="fa-solid fa-circle-play"></i>
+            Courses
+          </a>
+          <a class="tab" id="showDiv4">
+            <i class="fa-solid fa-thumbs-up"></i>
+            Review
+          </a>
+        </div>
+        <hr>
+        <div class="info">
+          <div id="div1">
+            <div class="instructor-info">
+              <div class="info-data">
+                <h3>Full Name</h3>
+                <p>ziad</p>
+                <h3>Date of Birth</h3>
+                <p>21</p>
+              </div>
+              <div class="info-data">
+                <h3>Mobile Number</h3>
+                <p>000</p>
+                <h3>Email Address</h3>
+                <p>zzz@gmail</p>
+              </div>
+              <span>
+                <p>Addition information</p>
+              </span>
+              <div class="info-data">
+                <h3>Reg Method</h3>
+                <p>Email</p>
+                <h3>Joining Date</h3>
+                <p>12-10-2023 10:10Pm</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- not now BACKEND  [Z] -->
+
+
+          <div id="div2" hidden>
+            <h1>Profile Overview</h1>
+            <div class="chartInstructor">
+              <h1>Total Earning</h1>
+              <div class="chartUpDates">
+                <div>
+                  <p>Monthly</p>
+                  <h1><span id="monthlyValue">4.25</span>k</h1>
+                  <span><i id="monthlyArrow"></i> 10%</span>
+                </div>
+                <div>
+                  <p>Weekly</p>
+                  <h1><span id="weeklyValue">1.20</span>k</h1>
+                  <span><i id="weeklyArrow"></i> 5%</span>
+                </div>
+                <div>
+                  <p>Daily(AVG)</p>
+                  <h1><span id="dailyAverage">0.50</span>k</h1>
+                  <span><i id="dailyArrow"></i> 10%</span>
+                </div>
+              </div>
+              <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chartStatus">
+              <div class="activeStudent" id="activeStudent">
+                <h1>Active Student</h1>
+                <div class="vs">
+                  <div>
+                    <h1 class="sales-value">600</h1>
+                  </div>
+                  <div>
+                    <span><i id="arrow"></i>10% </span>
+                    <p>Vs Last week</p>
+                  </div>
+                </div>
+              </div>
+              <div class="activeStudent" id="newEnroll">
+                <h1>New Enrolment</h1>
+                <div class="vs">
+                  <div>
+                    <h1 class="enroll-value">200</h1>
+                  </div>
+                  <div>
+                    <span><i id="arrow-right"></i>10% </span>
+                    <p>Vs Last week</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="div3" hidden>
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th> Courses List </th>
+                  <th> Status </th>
+                  <th> Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td class="td1"></td>
+                    <td class="td2"> Course_name </td>
+                    <td class="td2" id="status">course status</td>
+                    <td>
+                      <i class="fa-solid fa-trash" style="color: red;" id="deleteIcon"></i>
+                    </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          <div id="div4" hidden>
+            <table class="review">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" name="checkbox" id="checkbox" id="deleteIcon"> User</th>
+                  <th> Course Name </th>
+                  <th> Rating </th>
+                  <th> Review</th>
+                </tr>
+
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td class="td2">
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <img src="images/Frame 7.png" alt="">
+                    <div>
+                      <h1>Mariam Ali</h1>
+                      <p>MariamGamal@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2"> Python Fundmnetals</td>
+                  <td class="td2" id="rating"></td>
+                  <td>
+                    <p>I will highly This course</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(tab => tab.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+    // Update the rating column based on the rating value
+    const ratingCells = document.querySelectorAll('#rating');
+    ratingCells.forEach(cell => {
+      const rating = getRandomRating(); // Replace this with backend server call to get the rating
+      cell.innerHTML = generateStarRating(rating);
+    });
+
+    // Function to generate star rating HTML based on the rating value
+    function generateStarRating(rating) {
+      const maxRating = 5;
+      let starsHTML = '';
+      for (let i = 1; i <= rating; i++) {
+        starsHTML += '<i class="fa-solid fa-star" style="color: #f7ce46;"></i>';
+      }
+      return starsHTML;
+    }
+
+
+    // Function to generate a random rating (just for display)
+    function getRandomRating() {
+      return Math.floor(Math.random() * 5) + 1;
+    }
+  </script>
+
+  <script>
+    // Get the table body
+    const tableBody = document.querySelector('#myTable tbody');
+
+    // Add click event listener to each delete icon
+    tableBody.addEventListener('click', (event) => {
+      if (event.target.id === 'deleteIcon') {
+        // Get the corresponding row and remove it
+        const row = event.target.parentNode.parentNode;
+        row.remove();
+
+        // Update the IDs of the remaining rows
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach((row, index) => {
+          const idCell = row.querySelector('td:first-child');
+          idCell.textContent = index + 1;
+        });
+      }
+    });
+
+    // Generate and assign IDs to each row
+    const rows = tableBody.querySelectorAll('tr');
+    rows.forEach((row, index) => {
+      const idCell = row.querySelector('td:first-child');
+      idCell.textContent = index + 1;
+    });
+  </script>
+
+  <script>
+    // Style the status column based on the status value
+    const statusCells = document.querySelectorAll('#status');
+    statusCells.forEach(cell => {
+      const status = cell.textContent;
+      if (status === 'Active') {
+        cell.style.color = 'green';
+      } else if (status === 'Pending') {
+        cell.style.color = 'yellow';
+      } else if (status === 'Cancelled') {
+        cell.style.color = 'red';
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    // Get the canvas element
+    var ctx = document.getElementById('salesChart').getContext('2d');
+
+    // Define the data for the chart
+    var data = {
+      labels: ['January', '', '', '', '', 'June'],
+      datasets: [{
+        label: 'Total Sales',
+        data: [100, 200, 150, 300, 250, 400],
+        backgroundColor: '#5acf90',
+        borderColor: '#5acf90',
+        borderWidth: 2,
+        lineTension: 0.3,
+        pointRadius: 4,
+        pointBackgroundColor: '#5acf90',
+        pointBorderColor: '#fff',
+        pointHoverRadius: 6,
+        pointHoverBackgroundColor: '#5acf90',
+        pointHoverBorderColor: '#fff',
+      }]
+    };
+
+    // Create the chart
+    var salesChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Retrieve average sales values from the backend
+    const currentWeekSales = 800;
+    const previousWeekSales = 400;
+
+    // Get the sales container element
+    const salesContainer = document.querySelector('#activeStudent');
+
+    // Get the arrow element
+    const arrowElement = document.querySelector('#arrow');
+
+    // Get the sales value element
+    const salesValueElement = document.querySelector('.sales-value');
+
+    // Set the sales value
+    salesValueElement.textContent = currentWeekSales;
+
+    // Set the color and arrow direction based on the comparison
+    if (currentWeekSales > previousWeekSales) {
+      arrowElement.innerHTML += '<i class="fa-solid fa-arrow-up"></i>';
+      arrowElement.style.color = 'green';
+    } else {
+      arrowElement.innerHTML += '<i class="fa-solid fa-arrow-down"></i>';
+      arrowElement.style.color = 'red';
+    }
+  </script>
+
+  <script>
+    let currentMonthlyEarn = 4.25;
+    let prevMonthlyEarn = 4.0;
+
+    let currentWeeklyEarn = 1.20;
+    let prevWeeklyEarn = 1.5;
+
+    let currentDailyAverage = 0.50;
+    let prevDailyAverage = 0.30;
+
+    const monthlyArrow = document.querySelector('#monthlyArrow');
+    const weeklyArrow = document.querySelector('#weeklyArrow');
+    const dailyArrow = document.querySelector('#dailyArrow');
+
+    const monthlyValue = document.querySelector('#monthlyValue');
+    const weeklyValue = document.querySelector('#weeklyValue');
+    const dailyAverage = document.querySelector('#dailyAverage');
+
+    monthlyValue.textContent = currentMonthlyEarn;
+    weeklyValue.textContent = currentWeeklyEarn;
+    dailyAverage.textContent = currentDailyAverage;
+
+    if (currentMonthlyEarn > prevMonthlyEarn) {
+      monthlyArrow.innerHTML += '<i class="fa-solid fa-arrow-up"></i>';
+      monthlyArrow.style.color = 'green';
+    } else {
+      monthlyArrow.innerHTML += '<i class="fa-solid fa-arrow-down"></i>';
+      monthlyArrow.style.color = 'red';
+    }
+    if (currentWeeklyEarn > prevWeeklyEarn) {
+      weeklyArrow.innerHTML += '<i class="fa-solid fa-arrow-up"></i>';
+      weeklyArrow.style.color = 'green';
+    } else {
+      weeklyArrow.innerHTML += '<i class="fa-solid fa-arrow-down"></i>';
+      weeklyArrow.style.color = 'red';
+    }
+    if (currentDailyAverage > prevDailyAverage) {
+      dailyArrow.innerHTML += '<i class="fa-solid fa-arrow-up"></i>';
+      dailyArrow.style.color = 'green';
+    } else {
+      dailyArrow.innerHTML += '<i class="fa-solid fa-arrow-down"></i>';
+      dailyArrow.style.color = 'red';
+    }
+  </script>
+
+  <script>
+    // Retrieve average sales values from the backend
+    const currentWeekEnroll = 200;
+    const previousWeeEnroll = 300;
+
+    // Get the sales container element
+    const enrollContainer = document.querySelector('#newEnroll');
+
+    // Get the arrow element
+    const arrowElementRight = document.querySelector('#arrow-right');
+
+    // Get the sales value element
+    const enrollValueElement = document.querySelector('.enroll-value');
+
+    // Set the sales value
+    enrollValueElement.textContent = currentWeekEnroll;
+
+    // Set the color and arrow direction based on the comparison
+    if (currentWeekEnroll > previousWeeEnroll) {
+      arrowElementRight.innerHTML += '<i class="fa-solid fa-arrow-up"></i>';
+      arrowElementRight.style.color = 'green';
+    } else {
+      arrowElementRight.innerHTML += '<i class="fa-solid fa-arrow-down"></i>';
+      arrowElementRight.style.color = 'red';
+    }
+  </script>
+
+  <!-- <script src="js/lib/bootstrap.js"></script>
+    <script src="js/lib/jquery-3.7.1.min.js"></script>
+    <script src="js/lib/popper.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.43.0/apexcharts.min.js"></script>
+  <script src="js/info.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--semiDark-color);
+  font-family: "poppins";
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-SemiBold.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-ExtraBold.ttf);
+  font-weight: 900;
+}
+
+:root {
+  --primary-color: #e98016;
+  --secondary-color: #5634ae;
+  --third-color: #ece7fe;
+  --secondaryText-color: #6f6c8f;
+  --dark-color: #000;
+  --semiDark-color: #002333;
+  --light-color: white;
+  --lightGray-color: #fafafa;
+  --gray-color: #808080;
+}
+
+header {
+  background-color: var(--third-color);
+  padding: 100px 0;
+}
+.certificates .card .btn {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-color);
+  transition: 200ms;
+  &:hover {
+    background-color: #e97f16e7;
+  }
+}

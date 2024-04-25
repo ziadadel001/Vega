@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/instructor_payment.css" />
+  <title>Dashboard-instructor payment</title>
+</head>
+
+<body onload="myFunction(x)">
+  <div id="mySidenav" class="sidenav nav-open">
+    <img src="images/Logo.png" alt="vegaLogo" />
+    <ul class="nav-list">
+      <li>
+        <div class="nav-list-btn active">
+          <img src="images/DashboardNavLogo.png" alt="" style="width: 40px" />
+          <a href="index.php" class="active">Dashboard</a>
+        </div>
+      </li>
+      <li>
+        <div class="nav-list-btn">
+          <img src="images/UsersNavLogo.png" alt="" style="width: 40px" />
+          <a href="#">Users</a>
+        </div>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <div class="nav-list-title">
+            <img src="images/MentorsNavLogo..png" style="width: 40px" alt="" />
+            <a href="#">Mentors</a>
+          </div>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="#">Mentors Overview</a></li>
+          <li><a href="#">Mentors List</a></li>
+          <li><a href="Mentor_payment.html">Mentors Payment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <img src="images/InstructorsNavLogo.png" style="width: 40px" alt="" />
+          <a href="#">Instructors</a>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="#">Instructors Overview</a></li>
+          <li><a href="#">Instructors List</a></li>
+          <li><a href="instructor_payment.html">Instructors Payment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="nav-list-btn collapsibles">
+          <img src="images/CoursesNavLogo.png" style="width: 40px" alt="" />
+          <a href="#">Courses</a>
+          <img src="images/ArrowIcon.png" class="icon" alt="" style="width: 8px" />
+        </div>
+        <ul class="content">
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Course List</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="main" class="main-shrink">
+    <nav>
+      <div class="nav-search">
+        <img class="nav-btn" onclick="toggleNav()" src="images/burgerMenu.png" />
+        <div class="search-bar">
+          <input type="search" name="search" id="search" />
+          <img src="images/searchIcon.png" alt="" />
+        </div>
+      </div>
+      <div class="nav-profile">
+        <img src="images/ringIcon.png" class="nav-btn" alt="" />
+        <img src="images/notificationIcon.png" class="nav-btn" alt="" />
+        <div class="nav-profile-info">
+          <div class="profile-data">
+            <h4>Ahmed Samy</h4>
+            <p>Admin</p>
+          </div>
+          <img src="images/man.png" alt="" />
+        </div>
+        <img src="images/settingIcon.png" class="nav-btn" alt="" />
+      </div>
+    </nav>
+    <div class="bread-crumb">
+      <h2>Instructor payment</h2>
+    </div>
+    <div class="container">
+      <div class="info-all">
+        <div class="toogle">
+          <button id="showDiv1" class="active-tab">
+            <img src="img/true.png" alt="" />
+            Completed Payment
+          </button>
+          <button id="showDiv2">
+            <img src="images/pending.png" alt="" /> Pending Payment
+          </button>
+        </div>
+
+        <div class="info">
+          <div id="div1">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    Instructor
+                  </th>
+                  <th>Account Number</th>
+                  <th>Amount</th>
+                  <th>Payment Date</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedGamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">Egypt</td>
+                  <td>
+                    <p>12 Active Courses</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="div2" hidden>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    Instructor
+                  </th>
+                  <th>Account Number</th>
+                  <th>Payment Amount</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedGamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+                <tr>
+                  <td class="td1">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <img src="images/Frame 78.png" alt="" />
+                    <div>
+                      <h1>Ahmed Gamal</h1>
+                      <p>ahmedgamal2002@gmail.com</p>
+                    </div>
+                  </td>
+
+                  <td class="td2">0123456789</td>
+                  <td class="td2">700$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="js/lib/bootstrap.js"></script>
+      <script src="js/lib/jquery-3.7.1.min.js"></script>
+      <script src="js/lib/popper.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.43.0/apexcharts.min.js"></script>
+  <script src="js/info.js"></script>
+</body>
+
+</html>

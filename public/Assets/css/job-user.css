@@ -1,0 +1,285 @@
+.left-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    gap: 12px;
+}
+
+.left-search button {
+    width: 180px;
+    margin: 0;
+}
+
+/* Select Options */
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+.select-selected {
+    background-color: transparent;
+    color: var(--txt-color);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #ABACAA transparent transparent transparent;
+    transform: translateY(-50%);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #ABACAA transparent;
+    top: 22px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-selected {
+    color: #ABABAB;
+    padding: 15px 16px;
+    border: 1px solid transparent;
+    border-color: #eee;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+}
+
+.select-items div {
+    color: #ABABAB;
+    padding: 10px 16px;
+    user-select: none;
+    border-top: 1px solid #eee;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: #efefef;
+}
+
+.first-option {
+    color: red;
+}
+
+.right-search {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.right-search .custom-select {
+    flex: 1;
+}
+
+@media (max-width: 567px) {
+    .left-search>button {
+        width: 48%;
+    }
+
+    .left-search>.filter {
+        width: 48%;
+    }
+
+    .left-search>.filter button {
+        width: 100%;
+    }
+
+    .left-search {
+        width: 100%;
+    }
+
+    .right-search {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .right-search .custom-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .right-search,
+    .left-search {
+        width: 100%;
+    }
+
+    main #search-filter {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* ------------------------------------ */
+
+/* Main Data Grid */
+.main-box-net {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.main-box-net .box {
+    border: 1px solid #d1d3d4;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    padding: 25px;
+    color: var(--txt-color);
+}
+
+.main-box-net .box .data h3 {
+    color: #002333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.main-box-net .box .data h5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6F6C8F !important;
+}
+
+.info-bottom .item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ABABAB;
+}
+
+.main-box-net .box .apply {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.main-box-net .box .apply .full {
+    background: #EFEBF9;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 8px;
+    color: #002333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.main-box-net .box .apply .btn {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .content-group {
+        flex-direction: column;
+    }
+
+    .main-box-net .box .apply {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-box-net .box .apply .full {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-box-net .box .info-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+.reconmmend {
+    color: var(--txt-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+/* For User Avatar */
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-desk {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .user-desk {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    header .container .lines {
+        order: 1;
+    }
+}
+@media (max-width: 768px) {
+    header .container .lines {
+        order: 1;
+        margin-left: 20px;
+    }
+}
+
+.user-desk .user-note {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: var(--main-color);
+    transition: var(--main-trans);
+}
+.user-desk .user-note:hover {
+    color: #e97f16ad
+}
+.user-desk .dropdown {
+    background-color: transparent;
+    color: var(--txt-color);
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favIcon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/timeSchedule/timeSchedule.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/timeSchedule/timeScheduleMediaQuery.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>VEGA - Time Schedule</title>
+  </head>
+  <body>
+    <section class="time-schedule pt-5">
+      <div class="container">
+        <h1>Time Schedule</h1>
+        <div class="wrapper">
+          <header class="pt-2 mb-3">
+            <p class="current-date m-0"></p>
+            <div class="icons">
+              <span class="prevNextBtn" id="prev"
+                ><img src="assets/images/TimeSchedule/Arrow-left.svg" alt=""
+              /></span>
+              <span class="prevNextBtn" id="next"
+                ><img src="assets/images/TimeSchedule/Arrow-right.svg" alt=""
+              /></span>
+            </div>
+          </header>
+          <div class="calendar">
+            <div class="days"></div>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tasks-container d-lg-flex gap-4 container">
+        <div class="task lessons">
+          <h4>Lessons</h4>
+
+          <div class="task-block mb-2">
+            <p class="">9:00</p>
+            <div class="task-div">
+              <div class="d-flex flex-column gap-2">
+                <img
+                  class="m-auto"
+                  src="assets/images/TimeSchedule/complete-mark.svg"
+                  alt=""
+                />
+                <p class="pts pts-complete">400 pts</p>
+              </div>
+              <div>
+                <p><span>Course Name: </span>Introduction to Figma</p>
+                <p><span>Chapter: </span>1</p>
+                <p><span>Lessons: </span>1 to 4</p>
+                <p class="task-duration">9:00 - 9:25</p>
+              </div>
+            </div>
+          </div>
+          <div class="task-block mb-2">
+            <p class="">9:25</p>
+            <div class="task-div">
+              <img src="assets/images/TimeSchedule/break.svg" alt="" />
+              <p>
+                9:25 - 9:30
+                <span class="text-dark">Break Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="task-block mb-2">
+            <p class="">9:30</p>
+            <div class="task-div">
+              <div class="d-flex flex-column gap-2">
+                <div class="progress-bar"></div>
+                <p class="pts pts-progress">300 pts</p>
+              </div>
+              <div>
+                <p><span>Course Name: </span>Introduction to Figma</p>
+                <p><span>Chapter: </span>2</p>
+                <p><span>Lessons: </span>1 to 3</p>
+                <p class="task-duration">9:30 - 9:55</p>
+              </div>
+            </div>
+          </div>
+          <div class="task-block mb-2">
+            <p class="">9:55</p>
+            <div class="task-div">
+              <img src="assets/images/TimeSchedule/break.svg" alt="" />
+              <p>
+                9:55 - 10:10
+                <span class="text-dark">Break Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="task-block mb-2">
+            <p class="">10:10</p>
+            <div class="task-div">
+              <div class="d-flex flex-column gap-2">
+                <div class="progress-bar"></div>
+                <p class="pts pts-progress">300 pts</p>
+              </div>
+              <div>
+                <p><span>Course Name: </span>Introduction to Figma</p>
+                <p><span>Chapter: </span>3</p>
+                <p><span>Lessons: </span>1 to 4</p>
+                <p class="task-duration">10:10 - 10:40</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="task sessions">
+          <h4>Sessions</h4>
+          <div class="task-block mb-2">
+            <p class="opacity-0">9:00</p>
+            <div class="task-div d-flex flex-column align-items-start gap-1">
+              <div class="mentor-details">
+                <div class="d-flex gap-2">
+                  <img
+                    src="assets/images/TimeSchedule/heroPerson2.jpg"
+                    alt="mentorImage"
+                    class=""
+                  />
+                  <div class="mentor-info">
+                    <p>Ahmed Gamal</p>
+                    <p class="text-muted fw-normal">
+                      Senior ui ux designer at Google
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 flex-column">
+                  <img
+                    style="width: 40px; height: 40px"
+                    src="assets/images/TimeSchedule/Incomplete-mark.svg"
+                    alt=""
+                  />
+                  <p class="pts pts-progress">50 pts</p>
+                </div>
+              </div>
+
+              <div class="session-details d-flex flex-column gap-2">
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/tag.png"
+                    alt="tag"
+                  />
+                  <div class="info">
+                    <p>Portfolio Review</p>
+                    <p class="text-muted fw-normal">Topic</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/clockIcon.png"
+                    alt="clock"
+                  />
+                  <div class="info">
+                    <p>5:00 pm</p>
+                    <p class="text-muted fw-normal">Time</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/timer.png"
+                    alt="duration"
+                  />
+                  <div class="info">
+                    <p>30 minutes</p>
+                    <p class="text-muted fw-normal">Duration</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/clipboard-text.png"
+                    alt="clock"
+                  />
+                  <div class="info">
+                    <p>
+                      Zoom link will be sent 10 Minutes before the session via
+                      Email.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn mt-3 py-2">Reschedule</a>
+            </div>
+          </div>
+        </div>
+        <div class="task interviews">
+          <h4>Interviews</h4>
+          <div class="task-block mb-2">
+            <p class="opacity-0">9:00</p>
+            <div class="task-div d-flex align-items-start">
+              <img src="assets/images/TimeSchedule/company.png" alt="company" />
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/clockIcon.png"
+                    alt="tag"
+                  />
+                  <p>5:00</p>
+                </div>
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/suitCase.png"
+                    alt="tag"
+                  />
+                  <p>Product Design</p>
+                </div>
+                <div class="d-flex align-items-start gap-2">
+                  <img
+                    class="pt-1"
+                    src="assets/images/TimeSchedule/locationIcon.png"
+                    alt="tag"
+                  />
+                  <p>306 Corniche El Nil , Floor 2 ,El Maadi .</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/lib/popper.min.js"></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/TimeSchedule/timeSchedule.js"></script>
+  </body>
+</html>
