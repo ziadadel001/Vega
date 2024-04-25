@@ -1,9 +1,7 @@
 # Vega
 
 ## Description:
-
-The Vega is an educational platform built using Laravel framework that provides users with the ability to book courses, interact with them, and reserve mentors for personalized guidance. The platform also offers a user-friendly dashboard for seamless navigation and management of educational activities.
-
+Vega is an educational platform built using Laravel framework that provides users with the ability to book courses, interact with them, and reserve mentors for personalized guidance. Additionally, the platform offers a user-friendly dashboard for seamless navigation and management of educational activities, along with a job section where users can apply to any available job.
 ## Features:
 
 - Course booking system
@@ -27,12 +25,13 @@ We are truly grateful for their collaboration and efforts, which have greatly co
 ## Project Screenshots:
 
 <div align="center">
-<img src="screens/signed in.png" width="300" />
- 
-  <img src="screens/Course info final.png" width="300" />
-  <img src="screens/Courses final.png" width="300" /> 
-  <img src="screens/sign in.png" width="300" />
-  <img src="screens/sign up.png" width="300" />
+  <img src="screens/signed in.png" width="400" />
+  <img src="screens/Course info final.png" width="400" />
+  <img src="screens/Courses final.png" width="400" /> 
+  <img src="screens/Job for registeredg users.png" width="400" />
+    <img src="screens/job detail.png" width="400" />
+  <img src="screens/sign in.png" width="400" />
+  <img src="screens/sign up.png" width="400" />
   
 </div>
 
