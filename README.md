@@ -16,9 +16,8 @@ We would like to extend our heartfelt gratitude to the frontend development team
 We would like to give special thanks to:
 
 - [Abdullah ibrahem](https://github.com/Abdoullahibrahem) -Frontend Developer
-- [Karen fayez](https://github.com/janesmith) - UI/UX Designer
 - [Ziad nader](https://github.com/Ziad1011) - Frontend Developer
-- [Abdullah hossam](https://github.com/abdullahhossam22) - backend Developer
+- [Abdullah hossam](https://github.com/abdullahhossam2002) - backend Developer
 
 We are truly grateful for their collaboration and efforts, which have greatly contributed to the success of this project.
 
@@ -99,7 +98,3 @@ To install and run the Vega, follow these steps:
 ## Contributing:
 
 Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
-
-## License:
-
-This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
